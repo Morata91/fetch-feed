@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T02:44:35.512575+00:00",
+  "generated_at": "2026-11-16T02:25:19.594128+00:00",
   "feeds": {
     "whats_new": {
       "source": "https://aws.amazon.com/about-aws/whats-new/recent/feed/",
@@ -174,6 +174,15 @@
           ]
         },
         {
+          "title": "AWS Backup adds logically air-gapped vault support for Amazon EBS Snapshots Archive",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-backup-lag-vault-ebs-archive/",
+          "published": "2026-11-12T08:00:00+00:00",
+          "summary": "<p>AWS Backup logically air-gapped vault now supports Amazon EBS Snapshots Archive. Logically air-gapped vaults are a type of AWS Backup vault that allows secure sharing of backups across accounts and AWS Organizations, supporting direct restore to reduce recovery time from a data loss event.</p> \n<p>You can now archive Amazon EBS backups held in a logically air-gapped vault to Amazon EBS Snapshots Archive, a low-cost tier for snapshots you rarely access. A logically air-gapped vault stores immutable backups that are locked by default, and isolated with encryption using AWS owned keys or customer-managed keys. This helps you meet long-term retention and compliance requirements at lower storage cost.</p> \n<p>You can get started using the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. In a backup plan rule that runs monthly or less often, specify a logically air-gapped vault as the primary backup destination or copy destination. Then enable Archive Amazon EBS snapshots in the backup rule lifecycle or copy lifecycle and set the time in warm storage before the backup transitions.</p> \n<p>This support is available in all AWS Regions where both logically air-gapped vault and Amazon EBS Snapshots Archive are available. For more information and detailed regional availability, visit the <a href=\"https://docs.aws.amazon.com/aws-backup/latest/devguide/backup-feature-availability.html#features-by-region\" target=\"_blank\" rel=\"noopener noreferrer\">AWS Backup documentation</a>. To learn more about logically air-gapped vaults, visit the <a href=\"https://docs.aws.amazon.com/aws-backup/latest/devguide/logicallyairgappedvault.html\" target=\"_blank\" rel=\"noopener noreferrer\">product documentation</a> and <a href=\"https://aws.amazon.com/backup/pricing/\">pricing page</a>.</p>",
+          "categories": [
+            "general:products/aws-backup,general:products/amazon-elastic-block-store,marketing:marchitecture/storage"
+          ]
+        },
+        {
           "title": "Amazon FSx for Lustre lowers the entry cost of Intelligent-Tiering file systems by 75%",
           "link": "https://aws.amazon.com/about-aws/whats-new/2026/11/fsx-lustre-intelligent-tiering-lower-throughput/",
           "published": "2026-11-12T08:00:00+00:00",
@@ -189,15 +198,6 @@
           "summary": "<p>AWS Glue introduces automatic version upgrades, a capability that keeps your Apache Spark jobs current on the latest AWS Glue runtime without manual coordination. Staying current on supported runtimes gives your jobs the latest security patches, performance improvements, and support for evolving table formats such as Apache Iceberg. Auto upgrades include multiple levels of validations including assessing jobs for compatibility with the upgraded runtime, obtaining your consent before executing jobs on a newer version, and validating upgraded job runs against each job's established output profile, so your jobs upgrade with the right guardrails in place.</p>\n<p>By setting a job's version to \"Auto\", upgrades that once required weeks of planning and execution now happen automatically. Platform teams can standardize runtime versions across large fleets without chasing individual job owners, and business units without a central upgrade team can keep their jobs current hands-free. Each job is validated against its established output schema, data volume, latency, and format before it upgrades, so you can advance with confidence. Jobs that need code changes keep running safely on their current version, and AWS Glue provides an upgrade analysis with specific fixes you can apply directly or with the Apache Spark upgrade agent.</p>\n<p>Auto upgrades for AWS Glue are available in all AWS Commercial Regions.</p>\n<p>To get started, select \"Auto\" as the AWS Glue version when creating or updating an Apache Spark job using the AWS Glue Studio or AWS CLI, API, and SDKs. Alternatively, you can update multiple jobs at once using the AWS Glue <a href=\"https://github.com/aws-samples/aws-glue-samples/blob/8d52b2c004d48b4d15c20cb1b0bd161da0c98a0d/utilities/skills/managing-glue-jobs/README.md\" target=\"_blank\">skill to manage your jobs</a>. To learn more, visit the <a href=\"https://docs.aws.amazon.com/glue/latest/dg/auto-version-upgrades.html\" target=\"_blank\">AWS Glue documentation</a>.</p>",
           "categories": [
             "general:products/aws-glue"
-          ]
-        },
-        {
-          "title": "AWS Backup adds logically air-gapped vault support for Amazon EBS Snapshots Archive",
-          "link": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-backup-lag-vault-ebs-archive/",
-          "published": "2026-11-12T08:00:00+00:00",
-          "summary": "<p>AWS Backup logically air-gapped vault now supports Amazon EBS Snapshots Archive. Logically air-gapped vaults are a type of AWS Backup vault that allows secure sharing of backups across accounts and AWS Organizations, supporting direct restore to reduce recovery time from a data loss event.</p> \n<p>You can now archive Amazon EBS backups held in a logically air-gapped vault to Amazon EBS Snapshots Archive, a low-cost tier for snapshots you rarely access. A logically air-gapped vault stores immutable backups that are locked by default, and isolated with encryption using AWS owned keys or customer-managed keys. This helps you meet long-term retention and compliance requirements at lower storage cost.</p> \n<p>You can get started using the AWS Backup console, AWS Command Line Interface (CLI), or AWS SDKs. In a backup plan rule that runs monthly or less often, specify a logically air-gapped vault as the primary backup destination or copy destination. Then enable Archive Amazon EBS snapshots in the backup rule lifecycle or copy lifecycle and set the time in warm storage before the backup transitions.</p> \n<p>This support is available in all AWS Regions where both logically air-gapped vault and Amazon EBS Snapshots Archive are available. For more information and detailed regional availability, visit the <a href=\"https://docs.aws.amazon.com/aws-backup/latest/devguide/backup-feature-availability.html#features-by-region\" target=\"_blank\" rel=\"noopener noreferrer\">AWS Backup documentation</a>. To learn more about logically air-gapped vaults, visit the <a href=\"https://docs.aws.amazon.com/aws-backup/latest/devguide/logicallyairgappedvault.html\" target=\"_blank\" rel=\"noopener noreferrer\">product documentation</a> and <a href=\"https://aws.amazon.com/backup/pricing/\">pricing page</a>.</p>",
-          "categories": [
-            "general:products/aws-backup,general:products/amazon-elastic-block-store,marketing:marchitecture/storage"
           ]
         },
         {
@@ -408,21 +408,21 @@
           ]
         },
         {
-          "title": "Amazon RDS for PostgreSQL announces Extended Support minor versions 13.23-rds.20260819, 12.22-rds.20260820 and 11.22-rds.20260822",
-          "link": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-rds-postgresql-extended-support/",
-          "published": "2026-11-10T17:00:00+00:00",
-          "summary": "<p><a href=\"https://aws.amazon.com/rds/postgresql/\" target=\"_blank\">Amazon Relational Database Service (RDS) for PostgreSQL</a> announces Amazon RDS Extended Support minor versions 13.23-rds.20260819, 12.22-rds.20260820 and 11.22-rds.20260822.</p> \n<p><a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html\" target=\"_blank\">Amazon RDS Extended Support</a> provides up to three additional years of fixes for critical Common Vulnerabilities and Exposures (CVE) and bugs beyond a major version's end of standard support date, giving you more time to upgrade to a new major version.</p> \n<p>You can upgrade your database using <a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html\" target=\"_blank\">Amazon RDS Blue/Green Deployments</a>, in-place upgrade, or restore from a snapshot. Learn more about performing version upgrades in the <a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.PostgreSQL.html\" target=\"_blank\">Amazon RDS for PostgreSQL User Guide</a>.</p> \n<p>Amazon RDS for PostgreSQL makes it simple to set up, operate, and scale PostgreSQL deployments in the cloud. Create or update a fully managed Amazon RDS database in the <a href=\"https://console.aws.amazon.com/rds/\" target=\"_blank\">Amazon RDS Management Console</a> or by using the AWS Command Line Interface (AWS CLI).</p>",
-          "categories": [
-            "marketing:marchitecture/databases,general:products/amazon-rds"
-          ]
-        },
-        {
           "title": "Amazon RDS for MySQL 26.10 is now available in Amazon RDS Database Preview Environment",
           "link": "https://aws.amazon.com/about-aws/whats-new/2026/11/rds-mysql-26-10-preview-environment/",
           "published": "2026-11-10T17:00:00+00:00",
           "summary": "<p>Starting today, <a href=\"https://aws.amazon.com/rds/mysql/\" target=\"_blank\" rel=\"noopener noreferrer\">Amazon RDS for MySQL</a> 26.10 is available in the <a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-db-instance-in-preview-environment.html\" target=\"_blank\" rel=\"noopener noreferrer\">Amazon RDS Database Preview Environment</a>, allowing you to evaluate the pre-release of MySQL 26.10 on Amazon RDS for MySQL.</p> \n<p>MySQL 26.10 includes bug fixes, security patches, and some improvements to READ COMMITTED workload performance and purge lag warnings in the error log. On busy READ COMMITTED workloads, NUMA systems performance could be impacted as each read view that closed required a global mutex. Read-view objects can now be reused which eliminates the global mutex on closure. The error log now reports warnings when the history-list length (HLL) crosses innodb_max_purge_lag and when purge lag begins delaying DML, so you can detect purge backlogs before they affect performance. To learn more, please refer to the <a href=\"https://dev.mysql.com/doc/refman/26.10/en/mysql-nutshell.html\" target=\"_blank\" rel=\"noopener noreferrer\">MySQL 26.10 release notes</a>.</p> \n<p>Amazon RDS Database Preview Environment database instances are retained for a maximum period of 60 days and are automatically deleted after the retention period. Amazon RDS database snapshots that are created in the Preview Environment can only be used to create or restore database instances within the Preview Environment. Amazon RDS Database Preview Environment database instances are priced as per the <a href=\"https://aws.amazon.com/rds/mysql/pricing/\" target=\"_blank\" rel=\"noopener noreferrer\">pricing</a> in the US East (Ohio) Region.</p>",
           "categories": [
             "general:products/amazon-rds,marketing:marchitecture/databases"
+          ]
+        },
+        {
+          "title": "Amazon RDS for PostgreSQL announces Extended Support minor versions 13.23-rds.20260819, 12.22-rds.20260820 and 11.22-rds.20260822",
+          "link": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-rds-postgresql-extended-support/",
+          "published": "2026-11-10T17:00:00+00:00",
+          "summary": "<p><a href=\"https://aws.amazon.com/rds/postgresql/\" target=\"_blank\">Amazon Relational Database Service (RDS) for PostgreSQL</a> announces Amazon RDS Extended Support minor versions 13.23-rds.20260819, 12.22-rds.20260820 and 11.22-rds.20260822.</p> \n<p><a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/extended-support.html\" target=\"_blank\">Amazon RDS Extended Support</a> provides up to three additional years of fixes for critical Common Vulnerabilities and Exposures (CVE) and bugs beyond a major version's end of standard support date, giving you more time to upgrade to a new major version.</p> \n<p>You can upgrade your database using <a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/blue-green-deployments.html\" target=\"_blank\">Amazon RDS Blue/Green Deployments</a>, in-place upgrade, or restore from a snapshot. Learn more about performing version upgrades in the <a href=\"https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.PostgreSQL.html\" target=\"_blank\">Amazon RDS for PostgreSQL User Guide</a>.</p> \n<p>Amazon RDS for PostgreSQL makes it simple to set up, operate, and scale PostgreSQL deployments in the cloud. Create or update a fully managed Amazon RDS database in the <a href=\"https://console.aws.amazon.com/rds/\" target=\"_blank\">Amazon RDS Management Console</a> or by using the AWS Command Line Interface (AWS CLI).</p>",
+          "categories": [
+            "marketing:marchitecture/databases,general:products/amazon-rds"
           ]
         },
         {
@@ -457,6 +457,64 @@
     "aws_blog": {
       "source": "https://aws.amazon.com/jp/blogs/news/feed/",
       "items": [
+        {
+          "title": "AWS でのマルウェア解析: 安全な環境の構築",
+          "link": "https://aws.amazon.com/jp/blogs/news/malware-analysis-on-aws-setting-up-a-secure-environment/",
+          "published": "2026-11-16T00:50:12+00:00",
+          "summary": "AWS でマルウェア解析を行うための、安全でコンプライアンスに準拠した環境の構築方法を紹介します。AWS 適正利用規約と AWS サービス条件への準拠を前提に、Amazon VPC によるネットワーク分離と送信トラフィックの遮断、IAM のアクセス許可の境界や SCP による権限昇格の防止、インスタンスの強化、暗号化された Amazon S3 ストレージ、Amazon GuardDuty や AWS CloudTrail によるモニタリングまでを扱います。多層防御のアプローチとセットアップチェックリストもあわせて解説します。",
+          "categories": [
+            "Best Practices",
+            "Customer Solutions",
+            "Intermediate (200)",
+            "Security, Identity, & Compliance",
+            "Security Blog"
+          ]
+        },
+        {
+          "title": "S3 バケットへフォレンジックアーティファクトを安全に収集するためのフレームワーク",
+          "link": "https://aws.amazon.com/jp/blogs/news/a-framework-for-securely-collecting-forensic-artifacts-into-s3-buckets/",
+          "published": "2026-11-16T00:45:11+00:00",
+          "summary": "セキュリティインシデントの発生時に、フォレンジックアーティファクトを Amazon S3 バケットへ安全に収集するためのフレームワークを紹介します。AWS STS とセッションポリシーを組み合わせて、有効期限付きで権限を絞り込んだ一時的な認証情報を払い出します。これにより、既存のフォレンジックツールを変更せずに最小権限を実現できます。また、暗号化やバージョニングなどの S3 バケット設定のベストプラクティスを解説します。さらに、Step Functions、AWS Systems Manager、AWS CDK を使用した収集ワークフローの自動化とデプロイの手順も説明します。",
+          "categories": [
+            "Advanced (300)",
+            "Amazon Simple Storage Service (S3)",
+            "Security, Identity, & Compliance",
+            "Technical How-to",
+            "Digital forensics",
+            "Incident response",
+            "Security Blog"
+          ]
+        },
+        {
+          "title": "AWS Systems Manager と Amazon Security Lake を使用したファイル整合性監視",
+          "link": "https://aws.amazon.com/jp/blogs/news/file-integrity-monitoring-with-aws-systems-manager-and-amazon-security-lake/",
+          "published": "2026-11-16T00:41:09+00:00",
+          "summary": "Amazon EC2 インスタンス上の不正なファイル変更を検出する、サーバーレスのファイル整合性監視ソリューションの構築方法を紹介します。AWS Systems Manager Inventory でファイルメタデータを収集し、バージョニングを有効にした Amazon S3 バケットに保存します。AWS Lambda 関数でバージョン間の差分を比較して AWS Security Hub に検出結果を作成します。さらに、Amazon Security Lake で OCSF 形式に正規化し、Amazon Athena で分析する手順も解説します。",
+          "categories": [
+            "Amazon Security Lake",
+            "AWS Security Hub",
+            "AWS Systems Manager",
+            "Intermediate (200)",
+            "Security, Identity, & Compliance",
+            "Technical How-to",
+            "Security Blog"
+          ]
+        },
+        {
+          "title": "AWS セキュリティ運用を定着させる: AWS Security Hub と Amazon GuardDuty を活用する成熟度ロードマップ",
+          "link": "https://aws.amazon.com/jp/blogs/news/operationalizing-aws-security-a-maturity-roadmap/",
+          "published": "2026-11-16T00:35:16+00:00",
+          "summary": "AWS Security Hub と Amazon GuardDuty を有効化したものの、検出結果を運用に活かしきれていない組織に向けて、6 つのフェーズからなる成熟度ロードマップを紹介します。現状評価から始め、抑制ルールやコントロールの無効化によるノイズ削減、Amazon EventBridge と AWS Lambda を使った重要度別の通知、高信頼度の検出結果に対する自動修復の判断フレームワークを解説します。さらに、週次レビューや月次メトリクスによる運用サイクルの確立と、予防的コントロールによるアーキテクチャの成熟までを説明します。",
+          "categories": [
+            "Amazon GuardDuty",
+            "AWS Security Hub",
+            "Best Practices",
+            "Intermediate (200)",
+            "Security, Identity, & Compliance",
+            "Security",
+            "Security Blog"
+          ]
+        },
         {
           "title": "脅威アクターが ARTEX の AI エージェントで展開するサイバー犯罪キャンペーンを Amazon Threat Intelligence が観測",
           "link": "https://aws.amazon.com/jp/blogs/news/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/",
@@ -544,74 +602,6 @@
             "Advanced (300)",
             "AWS Quick",
             "Technical How-to"
-          ]
-        },
-        {
-          "title": "AWS PrivateLink で企業ネットワークから AWS Quick へのアクセスを保護する",
-          "link": "https://aws.amazon.com/jp/blogs/news/securing-quick-access-from-corporate-networks-with-aws-privatelink/",
-          "published": "2026-11-13T01:53:56+00:00",
-          "summary": "社内ファイアウォールの内側やオンプレミスにあるデータソースに、パブリックインターネットを通らずに AWS Quick から接続する方法を説明します。AWS PrivateLink による VPC エンドポイント、VPC 接続、IAM Identity Center によるアイデンティティ制御、VPC エンドポイントによるアクセス制限を組み合わせた構成を紹介します。",
-          "categories": [
-            "Advanced (300)",
-            "AWS PrivateLink",
-            "AWS Quick",
-            "Technical How-to"
-          ]
-        },
-        {
-          "title": "AWS Quick のスキルとエージェントの仕組み",
-          "link": "https://aws.amazon.com/jp/blogs/news/how-skills-and-agents-work-in-aws-quick/",
-          "published": "2026-11-13T01:50:29+00:00",
-          "summary": "AWS Quick でエージェント、スキル、データがどう組み合わさるのかを説明します。チームで使えるスキルの作り方と共有方法、本番用スキルのベストプラクティス、公式カタログとカスタムエージェントの活用方法も紹介します。",
-          "categories": [
-            "AWS Quick",
-            "Best Practices",
-            "Intermediate (200)"
-          ]
-        },
-        {
-          "title": "AWS Quick のチャットエージェントを企業アプリケーションに埋め込む",
-          "link": "https://aws.amazon.com/jp/blogs/news/embed-amazon-quick-suite-chat-agents-in-enterprise-applications/",
-          "published": "2026-11-13T01:48:08+00:00",
-          "summary": "AWS Quick の埋め込みチャットを使うと、普段使っているアプリケーションの中で対話型 AI を利用できます。本記事では、Amazon CloudFront、Amazon Cognito、Amazon API Gateway、AWS Lambda を組み合わせ、AWS Quick のチャットエージェントを企業ポータルにセキュアに埋め込むソリューションを、ワンクリックでデプロイする方法を紹介します。",
-          "categories": [
-            "Amazon API Gateway",
-            "Amazon CloudFront",
-            "Amazon Cognito",
-            "Artificial Intelligence",
-            "AWS Lambda",
-            "AWS Quick",
-            "Embedded Analytics",
-            "Generative AI",
-            "Intermediate (200)",
-            "Technical How-to"
-          ]
-        },
-        {
-          "title": "AWS Weekly Roundup: AgentCore Runtime V2、Amazon DynamoDB のバルクプット項目など (2026 年 11 月 9 日)",
-          "link": "https://aws.amazon.com/jp/blogs/news/aws-weekly-roundup-agentcore-runtime-v2-amazon-dynamodb-bulk-put-items-and-more-november-9-2026/",
-          "published": "2026-11-13T01:38:23+00:00",
-          "summary": "新しいものを導入する際のコストの大部分は、新しいもの自体ではなく、移行作業にあります。Hive テーブルを A […]",
-          "categories": [
-            "Amazon Athena",
-            "Amazon Aurora",
-            "Amazon Bedrock",
-            "Amazon Bedrock AgentCore",
-            "Amazon DynamoDB",
-            "Amazon EC2",
-            "Amazon Elastic Container Registry",
-            "Amazon Elastic Container Service",
-            "Amazon Inspector",
-            "Amazon S3 Tables",
-            "Amazon SageMaker Unified Studio",
-            "Amazon Simple Notification Service (SNS)",
-            "Announcements",
-            "AWS Direct Connect",
-            "AWS Fargate",
-            "AWS Glue",
-            "AWS Lambda",
-            "AWS Security Hub",
-            "News"
           ]
         }
       ]
